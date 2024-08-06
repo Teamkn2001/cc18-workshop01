@@ -1,0 +1,233 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+body{
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+    background-color: skyblue;
+}
+
+.container{
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 15px;
+}
+
+header .container {
+   justify-content: space-between;
+}
+
+header{
+    background-color: rgb(224, 119, 136);
+    min-height: 100px;
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 4px solid salmon;
+    color: white;
+}
+
+header nav ul{
+    display: flex;
+    align-items: flex-end;
+}
+
+header ul{
+    display: flex;
+    gap: 20px;
+}
+
+header a {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: inherit;
+    /* take color form parent */
+    padding-inline: 4px
+}
+
+header a:hover{
+    color: green;
+    font-family: 800;
+}
+
+header span{
+    color: pink;
+}
+
+header .current{
+    background-color: green;
+    color: black;
+    padding: 8px;
+}
+
+/* .showcase{
+    background-image: url("https://picsum.photos/id/2/1500/500/?blur=4");
+    min-height: 400px;
+} */
+
+.showcase{
+    min-height: 400px;
+    background-image: url("https://picsum.photos/id/2/1500/500/?blur=4");
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.showcase .container{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+   
+}
+
+.showcase h1{
+    font-size: 8vw;
+    /* define vw will be good to responsive */
+}
+
+.showcase p{
+    font-size: 20px;
+    color: deeppink;
+
+}
+
+.newsletter{
+    /* padding-top: 10px; */
+    justify-content: space-between;
+    /* background-color: aqua; */
+    background-color: aquamarine;
+}
+
+.newsletter .container {
+    /* background-color: gold; */
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    color: deeppink;
+    
+}
+
+.newsletter input{
+    width: 250px;
+    font-size: 20px;
+    padding: 4px 8px;
+    background-color: antiquewhite;
+    border: none;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.newsletter button{
+    background-color: red;
+    font-size: 20px;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.newsletter button:hover{
+    transform: scale(1,2);
+}
+
+/* .boxes{
+   width: 25%;
+   height: 50vh;
+}
+
+.boxes .container{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+   text-align: center;
+   padding-top: 20px;
+   
+} */
+
+.boxes{
+    margin-top: 20px;
+}
+.boxes .container{
+    justify-content: space-between;
+}
+
+.boxes img{
+    height: 120px;
+}
+
+.boxes .box{
+    text-align: center;
+    padding: 12px;
+}
+
+footer{
+    background-color: rgb(125, 255, 212);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+footer p{
+    /* background-color: red; */
+    font-size: 20px;
+    
+}
+
+@media (max-width:900px){
+    header .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .newsletter .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .newsletter form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+    .newsletter input{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    
+    }
+    .boxes .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
